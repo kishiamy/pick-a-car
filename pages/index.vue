@@ -1,31 +1,77 @@
 <template>
-  <row>
-    <column :xs="12" :md="12" :lg="12">Pick a Car</column>
+  <div>
+    <h1>
+      pick-a-car
+    </h1>
 
-    <column :xs="12" :md="4" :lg="3">A</column>
-    <column :xs="12" :md="4" :lg="3">B</column>
-    <column :xs="12" :md="4" :lg="3">C</column>
-  </row>
-
-  <!-- <div>
-    <div>
-      <Logo />
-      <h1>
-        pick-a-car
-      </h1>
+    <div class="flex-container">
+      <div v-for="car in cars" :key="car.id">
+        <div class="flex-item cars">{{ car }}</div>
       </div>
     </div>
-  </div> -->
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { Row, Column } from 'vue-grid-responsive'
+import axios from 'axios'
 
-Vue.component('row', Row)
-Vue.component('column', Column)
+export default Vue.extend({
+  data() {
+    return {
+      cars: {},
+    }
+  },
+  async created() {
+    try {
+      let res = await axios.get(`http://localhost:8080/api/makes`)
 
-export default Vue.extend({})
+      this.cars = res.data
+    } catch (e) {
+      console.error(e)
+    }
+  },
+})
 </script>
 
-<style></style>
+<style>
+.cars {
+  background: rebeccapurple;
+}
+.flex-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flex-item {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+
+  margin: 1rem;
+  min-height: 5rem;
+  min-width: 5rem;
+}
+</style>

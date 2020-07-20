@@ -34,7 +34,6 @@
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.0",
-    "vue-grid-responsive": "^0.1.1",
     "vue-jest": "^3.0.4"
   }
 }

@@ -10632,11 +10632,6 @@ vue-eslint-parser@^7.0.0:
     esquery "^1.0.1"
     lodash "^4.17.15"
 
-vue-grid-responsive@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/vue-grid-responsive/-/vue-grid-responsive-0.1.1.tgz#8efec493b3c986f187ac7287c6529473e08b6548"
-  integrity sha512-sJi4c7hE6xncPOFEU+VfYDhIyPWaD7Zb3G6e8FQIRkFTwp39aBDjZtyeHBFuem4lmmC0GtI35z39kH5blnJi2w==
-
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
