@@ -1,19 +1,15 @@
 <template>
   <div>
-    <div>
-      <nuxt-link to="/">
-        <h1>
-          Pick a Car
-        </h1>
-      </nuxt-link>
-    </div>
-
-    <nuxt-link to="makes" class="flex-container"> See Makes</nuxt-link>
+    <h1>
+      Models
+    </h1>
+    <Model class="flex-container" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import Model from 'components/Model.vue'
 
 export default Vue.extend({})
 </script>

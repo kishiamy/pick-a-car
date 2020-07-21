@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div v-for="make in makes" :key="make.id">
-      <nuxt-link :to="{ path: 'model', query: { make: make } }">
-        <Card :content="make" />
-      </nuxt-link>
+    <div v-for="vehicle in vehicles" :key="vehicle.make">
+      <Card :content="vehicle" />
     </div>
   </div>
 </template>
@@ -16,13 +14,16 @@ import Card from 'components/Card.vue'
 export default Vue.extend({
   data() {
     return {
-      makes: [],
+      vehicles: {},
     }
   },
   async created() {
     try {
-      let res = await axios.get(`http://localhost:8080/api/makes`)
-      this.makes = res.data
+      let res = await axios.get(
+        `http://localhost:8080/api/vehicles?make=${this.$route.query.make}&model=${this.$route.query.model}`
+      )
+
+      this.vehicles = res.data
     } catch (e) {
       console.error(e)
     }
@@ -30,4 +31,4 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
