@@ -7,34 +7,16 @@
     </div>
 
     <div class="flex-container">
-      <div v-for="car in cars" :key="car.id">
-        <Card :content="car" />
-      </div>
+      <Make />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import axios from 'axios'
-import Card from 'components/Card.vue'
+import Make from 'components/Make.vue'
 
-export default Vue.extend({
-  data() {
-    return {
-      cars: {},
-    }
-  },
-  async created() {
-    try {
-      let res = await axios.get(`http://localhost:8080/api/makes`)
-
-      this.cars = res.data
-    } catch (e) {
-      console.error(e)
-    }
-  },
-})
+export default Vue.extend({})
 </script>
 
 <style lang="scss" scoped>
@@ -59,18 +41,18 @@ export default Vue.extend({
   align-items: center;
 }
 
-.flex-item {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
+// .flex-item {
+//   display: -ms-flexbox;
+//   display: -webkit-flex;
+//   display: flex;
+//   -webkit-order: 0;
+//   -ms-flex-order: 0;
+//   order: 0;
+//   -webkit-flex: 0 1 auto;
+//   -ms-flex: 0 1 auto;
+//   flex: 0 1 auto;
+//   -webkit-align-self: center;
+//   -ms-flex-item-align: center;
+//   align-self: center;
+// }
 </style>
