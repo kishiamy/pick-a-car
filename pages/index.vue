@@ -34,10 +34,7 @@ export default Vue.extend({
 })
 </script>
 
-<style>
-.cars {
-  background: rebeccapurple;
-}
+<style lang="scss" scoped>
 .flex-container {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -60,6 +57,9 @@ export default Vue.extend({
 }
 
 .flex-item {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -69,9 +69,5 @@ export default Vue.extend({
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-
-  margin: 1rem;
-  min-height: 5rem;
-  min-width: 5rem;
 }
 </style>
