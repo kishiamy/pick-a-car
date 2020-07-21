@@ -1,12 +1,14 @@
 <template>
   <div>
-    <h1>
-      pick-a-car
-    </h1>
+    <div>
+      <h1>
+        Pick a Car
+      </h1>
+    </div>
 
     <div class="flex-container">
       <div v-for="car in cars" :key="car.id">
-        <div class="flex-item cars">{{ car }}</div>
+        <Card :content="car" />
       </div>
     </div>
   </div>
@@ -15,6 +17,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import axios from 'axios'
+import Card from 'components/Card.vue'
 
 export default Vue.extend({
   data() {
