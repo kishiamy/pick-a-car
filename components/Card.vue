@@ -3,7 +3,9 @@
     <!-- <div class="card-image"> -->
     <img src="~/assets/car1.jpg" class="card-image" alt="cardImage" />
     <!-- </div> -->
-    <div class="card-content">{{ content }}</div>
+    <div class="card-content">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -11,15 +13,14 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  props: {
-    content: {
-      type: String,
-      default: true,
-    },
-    // image: {
-    //   type: String,
-    // },
-  },
+  //   props: {
+  //     content: {
+  //       type: String,
+  //     },
+  // image: {
+  //   type: String,
+  // },
+  //   },
 })
 </script>
 

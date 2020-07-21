@@ -2,7 +2,7 @@
   <div>
     <div v-for="make in makes" :key="make.id">
       <nuxt-link :to="{ path: 'model', query: { make: make } }">
-        <Card :content="make" />
+        <Card>{{ make }}</Card>
       </nuxt-link>
     </div>
   </div>

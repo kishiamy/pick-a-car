@@ -7,7 +7,7 @@
           query: { make: $route.query.make, model: model },
         }"
       >
-        <Card :content="model" />
+        <Card>{{ model }}</Card>
       </nuxt-link>
     </div>
   </div>
