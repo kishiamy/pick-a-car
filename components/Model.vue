@@ -22,7 +22,7 @@ import Card from 'components/Card.vue'
 export default Vue.extend({
   data() {
     return {
-      models: {},
+      models: [],
     }
   },
   async created() {
