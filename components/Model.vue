@@ -8,7 +8,7 @@
         }"
         class="no-link-styles"
       >
-        <Card>{{ model }}</Card>
+        <Card image="car2.jpg">{{ model }}</Card>
       </nuxt-link>
     </div>
   </div>

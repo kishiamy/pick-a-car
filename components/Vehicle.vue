@@ -1,7 +1,7 @@
 <template>
   <div class="flex-container">
     <div v-for="vehicle in vehicles" :key="vehicle.id">
-      <Card>
+      <Card image="car3.jpg">
         <div class="heading-card">
           <span> {{ vehicle.make }} {{ vehicle.model }} </span>
         </div>

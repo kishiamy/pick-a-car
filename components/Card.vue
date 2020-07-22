@@ -1,8 +1,10 @@
 <template>
   <div class="card round shadow">
-    <!-- <div class="card-image"> -->
-    <img src="~/assets/car1.jpg" class="card-image" alt="cardImage" />
-    <!-- </div> -->
+    <img
+      :src="require(`@/assets/img/${image}`)"
+      class="card-image"
+      alt="cardImage"
+    />
     <div class="card-content">
       <slot></slot>
     </div>
@@ -13,14 +15,12 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  //   props: {
-  //     content: {
-  //       type: String,
-  //     },
-  // image: {
-  //   type: String,
-  // },
-  //   },
+  props: {
+    image: {
+      type: String,
+      default: 'car.jpg',
+    },
+  },
 })
 </script>
 
@@ -63,7 +63,6 @@ $shadow-color: rgba($tundora-approx-color, 0.6);
   }
 }
 .card-image {
-  //   background-image: url('~assets/car1.jpg');
   background-size: cover;
   width: 312px;
   height: 156px;
