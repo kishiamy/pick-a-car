@@ -1,11 +1,12 @@
 <template>
-  <div>
+  <div class="flex-container">
     <div v-for="model in models" :key="model">
       <nuxt-link
         :to="{
           path: 'vehicles',
           query: { make: $route.query.make, model: model },
         }"
+        class="no-link-styles"
       >
         <Card>{{ model }}</Card>
       </nuxt-link>
@@ -45,4 +46,9 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.no-link-styles {
+  text-decoration: none;
+  color: inherit;
+}
+</style>

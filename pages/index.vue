@@ -1,42 +1,17 @@
 <template>
   <div>
-    <div>
-      <nuxt-link to="/">
-        <h1>
-          Pick a Car
-        </h1>
-      </nuxt-link>
+    <div class="header-container flex-container">
+      <h2>Makes</h2>
     </div>
-
-    <nuxt-link to="makes" class="flex-container"> See Makes</nuxt-link>
+    <Make />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import Make from 'components/Make.vue'
 
 export default Vue.extend({})
 </script>
 
-<style lang="scss" scoped>
-.flex-container {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-</style>
+<style lang="scss" scoped></style>

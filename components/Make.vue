@@ -1,7 +1,10 @@
 <template>
-  <div>
+  <div class="flex-container">
     <div v-for="make in makes" :key="make.id">
-      <nuxt-link :to="{ path: 'model', query: { make: make } }">
+      <nuxt-link
+        :to="{ path: 'model', query: { make: make } }"
+        class="no-link-styles"
+      >
         <Card>{{ make }}</Card>
       </nuxt-link>
     </div>
@@ -30,4 +33,9 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.no-link-styles {
+  text-decoration: none;
+  color: inherit;
+}
+</style>

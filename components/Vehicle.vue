@@ -1,18 +1,12 @@
 <template>
-  <div>
+  <div class="flex-container">
     <div v-for="vehicle in vehicles" :key="vehicle.id">
       <Card>
         <div class="heading-card">
-          <span>
-            {{ vehicle.make }}
-          </span>
-          <span>
-            {{ vehicle.model }}
-          </span>
+          <span> {{ vehicle.make }} {{ vehicle.model }} </span>
         </div>
         <div class="text-card">
-          <span>{{ vehicle.bodyType }},</span>
-          <span>{{ vehicle.fuelType }}</span>
+          <span>{{ vehicle.bodyType }}, {{ vehicle.fuelType }}</span>
         </div>
         <div class="text-card">
           <span>PowerPS: {{ vehicle.enginePowerPS }}</span>
@@ -53,13 +47,4 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped>
-.heading-card {
-  font: 24px Georgia, sans-serif;
-  margin-bottom: 12px;
-}
-.text-card {
-  font: 14px Montserrat, sans-serif;
-  margin-bottom: 0.3rem;
-}
-</style>
+<style lang="scss" scoped></style>

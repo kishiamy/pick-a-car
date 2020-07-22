@@ -25,6 +25,10 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+/* color name source http://chir.ag/projects/name-that-color/#444444 */
+$tundora-approx-color: #444444;
+$shadow-color: rgba($tundora-approx-color, 0.6);
+
 .card {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -45,31 +49,46 @@ export default Vue.extend({
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-
   margin: 1rem 1rem;
   width: 312px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    box-shadow: 0 5px $shadow-color;
+    transform: translateY(4px);
+  }
 }
 .card-image {
   //   background-image: url('~assets/car1.jpg');
   background-size: cover;
   width: 312px;
   height: 156px;
-  //   display: -ms-flexbox;
-  //   display: -webkit-flex;
-  //   display: flex;
 }
 .card-content {
+  font: 14px Montserrat, sans-serif;
   padding: 1rem 1rem;
+  margin-bottom: 0.3rem;
 }
 .shadow {
-  -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-  -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+  -moz-box-shadow: 5px 5px 5px $shadow-color;
+  -webkit-box-shadow: 5px 5px 5px $shadow-color;
+  box-shadow: 5px 5px 5px $shadow-color;
 }
 .round {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
   overflow: hidden;
+}
+.heading-card {
+  font: 24px Georgia, sans-serif;
+  margin-bottom: 12px;
+}
+.text-card {
+  margin-bottom: 0.3rem;
 }
 </style>
