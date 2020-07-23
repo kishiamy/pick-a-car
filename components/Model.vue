@@ -36,13 +36,6 @@ export default Vue.extend({
       console.error(e)
     }
   },
-  //   asyncData({ params }) {
-  //     return axios
-  //       .get(`http://localhost:8080/api/models?make=${params}`)
-  //       .then((res) => {
-  //         return { models: res.data.models }
-  //       })
-  //   },
 })
 </script>
 

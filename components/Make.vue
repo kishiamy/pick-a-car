@@ -17,6 +17,7 @@ import axios from 'axios'
 import Card from 'components/Card.vue'
 
 export default Vue.extend({
+  name: 'Make',
   data() {
     return {
       makes: [],
