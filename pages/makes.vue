@@ -1,9 +1,7 @@
 <template>
   <div>
-    <h1>
-      Makes
-    </h1>
-    <Make class="flex-container" />
+    <h1>Makes</h1>
+    <Make class="flex-container" :title="make" />
   </div>
 </template>
 

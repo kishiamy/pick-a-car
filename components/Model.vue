@@ -26,14 +26,13 @@ export default Vue.extend({
     }
   },
   async created() {
-    try {
-      let res = await axios.get(
-        `http://localhost:8080/api/models?make=${this.$route.query.make}`
-      )
+    let res = await axios.get(
+      `http://localhost:8080/api/models?make=${this.$route.query.make}`
+    )
+    this.models = res.data
 
-      this.models = res.data
-    } catch (e) {
-      console.error(e)
+    if (res.status >= 400) {
+      this.$router.replace('/error')
     }
   },
 })

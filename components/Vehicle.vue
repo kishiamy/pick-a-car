@@ -34,14 +34,13 @@ export default Vue.extend({
     }
   },
   async created() {
-    try {
-      let res = await axios.get(
-        `http://localhost:8080/api/vehicles?make=${this.$route.query.make}&model=${this.$route.query.model}`
-      )
+    let res = await axios.get(
+      `http://localhost:8080/api/vehicles?make=${this.$route.query.make}&model=${this.$route.query.model}`
+    )
+    this.vehicles = res.data
 
-      this.vehicles = res.data
-    } catch (e) {
-      console.error(e)
+    if (res.status >= 400) {
+      this.$router.replace('/error')
     }
   },
 })

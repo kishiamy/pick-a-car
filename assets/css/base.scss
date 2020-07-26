@@ -1,3 +1,6 @@
+/* color name source: http://chir.ag/projects/name-that-color/#5F9EA0 */
+$breaker-bay-approx: #5f9ea0;
+
 .flex-container {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -21,4 +24,10 @@
 .header-container {
   font: 14px Montserrat, sans-serif;
   font-weight: 400;
+  color: $breaker-bay-approx;
+}
+.nuxt-link-active,
+.no-link-styles {
+  text-decoration: none;
+  color: inherit;
 }
