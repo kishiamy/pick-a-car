@@ -16,6 +16,7 @@ beforeEach(() => {
     stubs: {
       Card: true,
       NuxtLink: true,
+      EmptyItems: true
     },
   })
 })
@@ -29,8 +30,7 @@ describe('Model', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
 
-  test('renders component classes and data', async () => {
-    expect(wrapper.classes('flex-container')).toBe(true)
+  test('renders component data', async () => {
     expect(wrapper.find('.flex-container').text()).toBe('CD')
   })
 

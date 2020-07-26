@@ -12,6 +12,7 @@ beforeEach(() => {
     stubs: {
       Card: true,
       NuxtLink: true,
+      EmptyItems: true
     },
   })
 })

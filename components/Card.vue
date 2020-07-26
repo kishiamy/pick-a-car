@@ -57,7 +57,6 @@ $shadow-color: rgba($tundora-approx-color, 0.6);
   &:hover {
     transform: scale(1.1);
   }
-
   &:active {
     box-shadow: 0 5px $shadow-color;
     transform: translateY(4px);

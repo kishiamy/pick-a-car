@@ -28,6 +28,7 @@ beforeEach(() => {
     stubs: {
       Card: true,
       NuxtLink: true,
+      EmptyItems: true
     },
   })
 })
@@ -43,6 +44,5 @@ describe('Vehicle', () => {
 
   test('renders component classes and data', async () => {
     expect(wrapper.classes('flex-container')).toBe(true)
-    // find vehicles by key or add a class for the v-for
   })
 })

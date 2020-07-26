@@ -19,6 +19,7 @@
         </div>
       </Card>
     </div>
+    <EmptyItems v-if="(vehicles.length == 0)" item="vehicles" />
   </div>
 </template>
 
@@ -26,6 +27,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 import Card from 'components/Card.vue'
+import EmptyItems from 'components/EmptyItems.vue'
 
 export default Vue.extend({
   data() {
